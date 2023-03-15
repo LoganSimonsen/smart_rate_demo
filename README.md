@@ -31,5 +31,5 @@ Replace the example keys above with your EasyPost API keys which you can get fro
 ### Starting the Server
 
 ```
-npm nodemon server
+nodemon server
 ```
