@@ -27,9 +27,12 @@ EP_PRODUCTION_KEY=E1234ASDF
 
 Replace the example keys above with your EasyPost API keys which you can get from the [EasyPost Dashboard](https://www.easypost.com/account/api-keys) (development accounts are free)
 
-
 ### Starting the Server
 
 ```
 nodemon server
 ```
+
+### Using Examples
+
+Open the example HTML file of your choosing in a web browser of your choosing. Make sure your server is running and you have configured your .env file.
