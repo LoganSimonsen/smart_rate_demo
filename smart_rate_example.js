@@ -385,6 +385,16 @@ function highlight() {
     p85[i].style.backgroundColor = "white";
     temp[i].style.backgroundColor = "lightgreen";
   }
+  highlightRow();
+}
+
+function highlightRow() {
+  let temp = document.getElementById(lowestSmartRate.id);
+  temp = temp.getElementsByTagName("td");
+  for (i = 0; i < temp.length; i++) {
+    temp[i].style.cssText = "background-color: lightgreen";
+    console.log(temp[i].style.cssText);
+  }
 }
 
 function percentileHighlight(e) {
