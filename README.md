@@ -1,4 +1,6 @@
-This is an example of using http-proxy-middleware to create a development server to make requests to the EasyPost API. The reason you may use this when developing against the EasyPost API, is due to the fact that EasyPost rejects alls requests coming directly from a browser. So if you want 1 simple development server to test out any EasyPost functionality and you are developing browser based applications, this could be a good option for you.
+This is a Demo App intented to showcase the data that and be obtained by using the EasyPost Smart Rate product. The App rates and EasyPost shipment and retrieves Smart Rate Time in Transit data and puts the information into an HTML table.
+
+![](https://github.com/LoganSimonsen/smart_rate_demo/sr.gif)
 
 ### Install Dependencies
 
