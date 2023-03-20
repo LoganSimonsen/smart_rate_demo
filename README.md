@@ -1,6 +1,6 @@
 This is a Demo App intented to showcase the data that and be obtained by using the EasyPost Smart Rate product. The App rates and EasyPost shipment and retrieves Smart Rate Time in Transit data and puts the information into an HTML table.
 
-<img src="https://github.com/LoganSimonsen/smart_rate_demo/sr.gif" />
+<img src="https://github.com/LoganSimonsen/smart_rate_demo/icons/sr.gif" />
 
 ### Install Dependencies
 

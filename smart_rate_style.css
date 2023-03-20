@@ -271,3 +271,22 @@ table .thead-light th {
     zoom: 0.75;
   }
 }
+@media screen and (max-width: 500px) {
+  body {
+    zoom: 0.65;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
