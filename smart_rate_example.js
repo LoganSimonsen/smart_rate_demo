@@ -267,7 +267,7 @@ function getCheapestRateByTransitTime(objects, transitTime) {
   let bottomRate = objects[0];
   for (let i = 0; i < objects.length; i++) {
     if (
-      objects[i].time_in_transit[percentileVar] == transitTime &&
+      objects[i].time_in_transit[percentileVar] <= transitTime &&
       objects[i].rate < cheapestRate
     ) {
       cheapestRate = objects[i];
