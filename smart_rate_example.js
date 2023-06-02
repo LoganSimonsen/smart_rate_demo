@@ -278,11 +278,13 @@ function getCheapestRateByTransitTime(objects, transitTime) {
   let tintDiff =
     bottomRate.time_in_transit[percentileVar] -
     lowestSmartRate.time_in_transit[percentileVar];
-
-  document.getElementById(
-    "result"
-  ).innerHTML = `Save ${rateDiff} and get it ${tintDiff} days later by selecting the ${bottomRate.carrier} ${bottomRate.service} service`;
-
+  if (tintDiff > 0) {
+    document.getElementById(
+      "result"
+    ).innerHTML = `Save ${rateDiff} and get it ${tintDiff} days later by selecting the ${bottomRate.carrier} ${bottomRate.service} service`;
+  } else {
+    document.getElementById("result").innerHTML = "";
+  }
   if (lowestSmartRate) {
     document.getElementById(lowestSmartRate.id).style.backgroundColor =
       "lightgreen";
@@ -293,15 +295,8 @@ function getCheapestRateByTransitTime(objects, transitTime) {
 
 function fetchRates(d) {
   const serverURL = "http://localhost:3000";
-  const carrierAccounts = [
-    "ca_a5c1dd47e2b145ad881050b01cba7c80",
-    "ca_2baab9cd12054b82a7406448b4c8d99c",
-    "ca_7c88d5a21fa344cc883c9b57460cdd17",
-    "ca_7b88b295c2d4422d8741415a616bec5a",
-    "ca_105c204b740c46a3b908266ebcc845a9",
-    "ca_e296ee89032b4bc49d353522dadc81f6",
-    "ca_5ce8cf555ec14090b03c56068786acaa",
-  ];
+  // use this if you wish to restrict the rated carrier accounts to a list
+  // const carrierAccounts = []; // your list of carrier accounts
   axios
     .post(`${serverURL}/shipments`, {
       shipment: {
@@ -327,7 +322,7 @@ function fetchRates(d) {
           width: d.width,
           height: d.height,
         },
-        carrier_accounts: carrierAccounts,
+        // carrier_accounts: carrierAccounts, // use this if you wish to restrict the rated carrier accounts to a list
       },
     })
     .then(function (response) {

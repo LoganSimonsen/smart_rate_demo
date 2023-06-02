@@ -38,3 +38,7 @@ nodemon server
 ### Using Examples
 
 Open the example HTML file of your choosing in a web browser of your choosing. Make sure your server is running and you have configured your .env file.
+
+### Limiting scope of carrier accounts rated against
+
+in the `smart_rate_example.js` file you can add your list of carrier_accounts (line 229 and 325)
